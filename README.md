@@ -183,6 +183,23 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 更新本地代码仓库。
 
+
+### 提交自己的修改到源码库（Pull Request 即 PR）
+
+一开始，我们是将 zhangyi999/LearnGitHub 的内容 Fork 到自己的仓库，相当于复制了一份给自己。
+
+我们在自己的仓库修改自己的文档内容，并不会影响到源文档内容【即 zhangyi999/LearnGitHub 文档】，这样设计是为了方便我们协作，不至于大家在同一个文档上相互覆盖。
+
+当我们修改完成本地文档后，我们需要将自己的修改发送给原作者【 这里是 zhangyi999 】，原作者决定是否更新到源文档。这里我们就要使用 `Pull Request` 功能。
+ 
+具体操作，进入自己的 LearnGitHub 库页面，点击 `Pull Request`：
+
+![pullrepust](./image/pullrepust.png)
+
+点击`create pull repust`，填写更新理由，即可提交更新需求。
+
+
+
 ### 更新自己的代码库
 
 你GitHub上的代码库是从 zhangyi999 这个库fork过去，这会导致一个问题就是：当源项目更新后，你fork的分支并不会一起更新，需要自己手动去更新。
