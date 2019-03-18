@@ -74,9 +74,16 @@ Git 各平台安装包下载地址为：http://git-scm.com/downloads 。
 ```
 > git add TEST.md
 ```
-这个命令是将`TEST.md`这个被修改的文件添加到本地git代码仓库。
-
-
+这个命令是将`TEST.md`这个被修改的文件添加到本地git代码仓库，`git add .` 表示将所有的修改添加到本地git代码仓库。
+完成后，在输入：
+```
+> git status
+```
+可以看到`TEST.md`已变成绿色，说明更改添加到本地Git仓库。
+继续在终端输入：
+```
+> git commit -m '第一次提交'
+```
 
 
 ### 更新自己的代码库
