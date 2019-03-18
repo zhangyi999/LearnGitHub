@@ -36,3 +36,7 @@ Git 各平台安装包下载地址为：http://git-scm.com/downloads 。
 ### Fork这个项目
 
 首先你得有自己的git账号，如果没有请点击最右上角的 "Sign Up" 按钮。
+有账号的登录自己的账号。
+
+先 Fork 该教程到自己的仓库，如图点击右上角：
+![avatar](./image/clone_git.png)
