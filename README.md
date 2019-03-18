@@ -87,6 +87,14 @@ Git 各平台安装包下载地址为：http://git-scm.com/downloads 。
 `git commit -m '第一次提交'` 命令是将自己的修改做提交处理，`-m` 后面的内容可以自己编写，说明本次提交的目的即可。
 
 commit 完成后，再次 `git status` 你会发现已经看不到 `TEST.md` 文件。
+
+> 提示，如果git提示：Please tell me who you are ，这是因为git提交需要设置你提交使用的用户名，和邮箱。你需要输入：
+
+```
+> git config --global user.email '你的注册邮箱'
+> git config --global user.name '你的用户名'
+```
+ 
 最后我们运行【需联网】：
 ```
 > git push 
