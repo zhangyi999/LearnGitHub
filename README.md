@@ -84,6 +84,14 @@ Git 各平台安装包下载地址为：http://git-scm.com/downloads 。
 ```
 > git commit -m '第一次提交'
 ```
+`git commit -m '第一次提交'` 命令是将自己的修改做提交处理，`-m` 后面的内容可以自己编写，说明本次提交的目的即可。
+
+commit 完成后，再次 `git status` 你会发现已经看不到 `TEST.md` 文件。
+最后我们运行【需联网】：
+```
+> git push 
+```
+完成后，在GitHub上就可以看到自己的更新的`TEST.md` 文件了。
 
 
 ### 更新自己的代码库
