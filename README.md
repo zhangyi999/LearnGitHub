@@ -44,6 +44,6 @@ Git 各平台安装包下载地址为：http://git-scm.com/downloads 。
 
 复制链接，在终端中输入：
 ```
-> git clone https://github.com/zhangyi999/LearnGitHub.git 
+> git clone https://github.com/******/LearnGitHub.git 
 ```
 经过一系列的操作后，你就可以在自己的仓库中看到这个项目了。
