@@ -88,7 +88,7 @@ Git 各平台安装包下载地址为：http://git-scm.com/downloads 。
 
 commit 完成后，再次 `git status` 你会发现已经看不到 `TEST.md` 文件。
 
-> 提示，如果git提示：Please tell me who you are ，这是因为git提交需要设置你提交使用的用户名，和邮箱。你需要输入：
+> 提示：如果git提示：Please tell me who you are ，这是因为git提交需要设置你提交使用的用户名，和邮箱。你需要输入：
 
 ```
 > git config --global user.email '你的注册邮箱'
@@ -110,8 +110,9 @@ commit 完成后，再次 `git status` 你会发现已经看不到 `TEST.md` 文
 
 1、增加源分支地址到你项目远程分支列表中(此处是关键)，先得将原来的仓库指定为upstream，命令为：
 ```
-> git remote add upstream https://github.com/被fork的仓库.git
+> git remote add upstream https://github.com/zhangyi999/LearnGitHub.git
 ```
+这里的git地址是你 FORK 的源码仓库地址。
 
 2、fetch源分支的新版本到本地
 ```
@@ -129,4 +130,5 @@ commit 完成后，再次 `git status` 你会发现已经看不到 `TEST.md` 文
 ```
 
 这个流程主要是为了同步源码库更新，比如长时间没更新代码，就需要在修改本地代码前先同步源码。
+
 
