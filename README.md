@@ -126,15 +126,62 @@ A 提交时 `TEST.md` 版本已更新，B 还是基于上一版本，B Push的�
 
 现在我们回到本地 `TEST.md` 文档中，在尾部添加`这是 B 参与者添加的内容`，保存，然后运行我们熟悉的4个命令【复习一遍】：
 ```
-> git tatus
+> git status
 > git add .
 > git commit -m 'B 参与者'
 > git push
 ```
 
+我们发现Push失败了，提示：
+```$xslt
+To https://github.com/zhangyi999/LearnGitHub.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/zhangyi999/LearnGitHub.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
 
+解决方法很简单，首先：
+```$xslt
+> git pull
+```
+这个命令的作用是将远程代码更新到本地 Git 代码库。
+我们在打开本地`TEST.md` 文件，发现文件已被修改：
+```$xslt
+这是我的第一个提交。
+<<<<<<< HEAD
 
+这是 B 参与者的提交。
+=======
+我是 A 参与者，我提交了一个版本。
+>>>>>>> 7fa7894c087dfb5c13e7c8d9272bd265f11c3d0c
+```
+`<<<<<<< HEAD`一下部分便是冲突的部分，我们需要根据情况修改自己代码，更改以后保存，便可以重新提交。
+我们将文本改成：
+```$xslt
+这是我的第一个提交。
 
+我是 A 参与者，我提交了一个版本。
+
+这是 B 参与者的提交。
+```
+
+接下来重新 4 步骤：
+```
+> git status
+> git add .
+> git commit -m 'merge'
+> git push
+```
+大功告成。
+> 注意：我们要养成良好的协作习惯，每次修改前更新下自己的文档，保持文档最新。
+```$xslt
+> git pull
+```
+更新本地代码仓库。
 
 ### 更新自己的代码库
 
