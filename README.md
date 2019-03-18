@@ -39,7 +39,7 @@ Git 各平台安装包下载地址为：http://git-scm.com/downloads 。
 有账号的登录自己的账号。
 
 先 Fork 该教程到自己的仓库，如图点击右上角：
-![avatar](./image/clone_git.png)
+![fork](./image/clone_git.png)
 
 
 复制链接，在终端中输入：
@@ -100,6 +100,40 @@ commit 完成后，再次 `git status` 你会发现已经看不到 `TEST.md` 文
 > git push 
 ```
 完成后，在GitHub上就可以看到自己的更新的`TEST.md` 文件了。
+
+
+
+### 处理冲突
+
+当同一个文件由多个参与着一起维护时，不可避免的会出现两个参与者同时对一份文档做了不同的修改，这时两个参与者再 `git push` 时会遇到文档冲突问题。
+
+如：A参与者在自己的本地仓库中在 `TEST.md` 文档末尾添加内容。同时B参与者也在自己本地仓库中的 `TEST.md` 文档末尾添加了不同的内容。此时 `TEST.md` 将会有 3 个版本：
+
+* GitHub 上保存原 `TEST.md` 版本
+* A参与者的 `TEST.md` 版本
+* B参与者的 `TEST.md` 版本
+
+如果A参与先Push自己的版本到 GitHub 上，将原版覆盖后 B 在 Push 自己的 `TEST.md` 版本，A 和 B 提交的版本就会冲突，因为 A 和 B 都是基于 GitHub 上保存的原 `TEST.md` 版本进行修改的，
+A 提交时 `TEST.md` 版本已更新，B 还是基于上一版本，B Push的版本就和 A 版本属于冲突版本【都是基于原 `TEST.md` 版本修改的】，这时 B 就需要修改自己的 `TEST.md` ，重新提交。
+
+#### 具体操作
+
+我们先模拟 A 参与者修改 `TEST.md` 文档，操作很简单，在 GitHub 上进入 `TEST.md` 文档：
+![fork](./image/eidt.png)
+点击铅笔，在线编辑文档，完成后点`commit change`，标题可写成 `A 参与者` ，这个动作相当于执行 `git commit -m 'A 参与者'` 命令。
+
+成功后可以看到 `TEST.md` 已被修改。
+
+现在我们回到本地 `TEST.md` 文档中，在尾部添加`这是 B 参与者添加的内容`，保存，然后运行我们熟悉的4个命令【复习一遍】：
+```
+> git tatus
+> git add .
+> git commit -m 'B 参与者'
+> git push
+```
+
+
+
 
 
 ### 更新自己的代码库
