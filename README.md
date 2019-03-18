@@ -1,7 +1,7 @@
 # LearnGitHub
 Learn by practicing
 
-##写在前面
+## 写在前面
 
 教程的目的是让零基础小白能学会使用GitHub完成工作任务。
 我们将通过该教程学会使用Git完成如下内容：
@@ -14,7 +14,7 @@ Learn by practicing
 
 
 
-###下载及安装
+### 下载及安装
 
 在使用Git前我们需要先安装 Git。Git 目前支持 Linux/Unix、Solaris、Mac和 Windows 平台上运行。
 Git 各平台安装包下载地址为：http://git-scm.com/downloads 。
@@ -26,6 +26,6 @@ Git 各平台安装包下载地址为：http://git-scm.com/downloads 。
 ```
 这就说明已经安装成功了。
 
-###Fork这个项目
+### Fork这个项目
 
 首先你得有自己的git账号，如果没有请点击最右上角的 "Sign Up" 按钮。
