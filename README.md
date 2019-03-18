@@ -70,4 +70,26 @@ Git 各平台安装包下载地址为：http://git-scm.com/downloads 。
 
 你GitHub上的代码库是从 zhangyi999 这个库fork过去，这会导致一个问题就是：当源项目更新后，你fork的分支并不会一起更新，需要自己手动去更新。
 
-接下来我们练习一下
+接下来我们练习一下通过源码库到本地。
+
+1、增加源分支地址到你项目远程分支列表中(此处是关键)，先得将原来的仓库指定为upstream，命令为：
+```
+> git remote add upstream https://github.com/被fork的仓库.git
+```
+
+2、fetch源分支的新版本到本地
+```
+> git fetch upstream
+```
+
+3、合并两个版本的代码
+```
+> git merge upstream/master
+```
+  
+4、将合并后的代码push到github上去
+```
+> git push origin master
+```
+
+这个流程主要是为了同步源码库更新，比如长时间没更新代码，就需要在修改本地代码前先同步源码。
