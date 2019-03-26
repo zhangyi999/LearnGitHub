@@ -152,14 +152,10 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 我们在打开本地`TEST.md` 文件，发现文件已被修改：
 ```$xslt
 这是我的第一个提交。
-<<<<<<< HEAD
 
 这是 B 参与者的提交。
-=======
-我是 A 参与者，我提交了一个版本。
->>>>>>> 7fa7894c087dfb5c13e7c8d9272bd265f11c3d0c
 ```
-`<<<<<<< HEAD`一下部分便是冲突的部分，我们需要根据情况修改自己代码，更改以后保存，便可以重新提交。
+以下部分便是冲突的部分，我们需要根据情况修改自己代码，更改以后保存，便可以重新提交。
 我们将文本改成：
 ```$xslt
 这是我的第一个提交。
@@ -183,6 +179,8 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 更新本地代码仓库。
 
+### 删除文件
+首先通过 `rm -r file` 删除本地文件，在执行 `git rm -r file`，接下来就是我们熟悉的 4 步骤，**push** 以后文件便被删除。
 
 ### 提交自己的修改到源码库（Pull Request 即 PR）
 
